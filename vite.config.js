@@ -7,9 +7,12 @@ export default defineConfig({
 	server: {
 		port: 3000,
 		proxy: {
-			"/api": {
-				target:"https://chit-chat-fe-mu.vercel.app",
+			'/api': {
+			  target: 'https://chitchatbe-a6aq.onrender.com',
+			  changeOrigin: true,
+			  secure: false,
+			  ws: false
 			},
-		},
 	},
+}
 });

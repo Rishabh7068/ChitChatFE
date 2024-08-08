@@ -10,7 +10,7 @@ const useGetMessages = () => {
     const getmessage = async () => {
       setLoading(true);
       try {
-        const res = await fetch(`${import.meta.env.VITE_API_URL}/api/msg/${selectedConversation._id}`, {
+        const res = await fetch(`/api/msg/${selectedConversation._id}`, {
           method: "GET",
           credentials: "include",
         });

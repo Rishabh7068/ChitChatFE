@@ -9,6 +9,7 @@ const useLogin = () => {
 
     const login = async (username , password) =>{
        const success = handelInputErrors(username, password);
+       console.log(`/api/auth/login`);
        
        if(!success){
         return;
@@ -16,7 +17,7 @@ const useLogin = () => {
 
        setLoading(true);
        try {
-            const res = await fetch(`${import.meta.env.VITE_API_URL}/api/auth/login`,{
+            const res = await fetch(`/api/auth/login`,{
                 method : "POST",
                 headers : {
                     "Content-Type" : "application/json"
