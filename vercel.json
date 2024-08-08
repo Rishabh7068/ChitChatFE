@@ -1,6 +1,8 @@
 {
     "rewrites": [
       { "source": "/(.*)", "destination": "/" }
-    ]
+    ],
+    "proxy" : "https://chitchatbe-a6aq.onrender.com"
+    
   }
   
